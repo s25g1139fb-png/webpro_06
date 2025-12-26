@@ -10,62 +10,49 @@ app.use(express.static("public01"));
 let items = [
     {
         id: 1,
-        anniversary: "20周年",
-        period: "2003年1月25日〜2004年4月11日",
-        theme: "Make a Wish",
-        concept: "DREAM",
-        catchphrase: "200％ディズニー！",
-        song: "Make a Wish",
-        parade: "ディズニー・ドリームス・オン・パレード",
-        costume: "東京ディズニーランドの各テーマエリア"
+        price: "900円",
+        store: "カウボーイ・クックハウス（TDL）/ リフレスコス（TDS）",
+        content: "スモーキーなターキーのレッグ",
     },
     {
         id: 2,
-        anniversary: "25周年",
-        period: "2008年4月14日〜2009年4月14日",
-        theme: "The Dream Goes On",
-        concept: "夢を開く魔法の鍵",
-        catchphrase: "夢よ、ひらけ。",
-        song: "魔法の鍵〜The Dream Goes On",
-        parade: "ジュビレーション！",
-        costume: "バージョンアップ"
+        price: "700円",
+        store: "カフェ・オーリンズ（TDL）",
+        content: "映画「プリンセスと魔法のキス」でも登場したオクラを使ったスパイシーなスープ",
     },
     {
         id: 3,
-        anniversary: "30周年",
-        period: "2013年4月15日〜2014年3月20日",
-        theme: "ザ・ハピネス・イヤー",
-        concept: "ハピネス・バルーン",
-        catchphrase: "ハピネスはここに！",
-        song: "Happiness is Here",
-        parade: "ハピネス・イズ・ヒア",
-        costume: "おもちゃ"
+        price: "620円",
+        store: "パン・ギャラクティック・ピザ・ポート（TDL）",
+        content: "チキンにトマト、チーズが入ったフライドピザ",
     },
     {
         id: 4,
-        anniversary: "35周年",
-        period: "2018年4月15日〜2019年3月25日",
-        theme: "Happiest Celebration!",
-        concept: "ドリーム・リボン",
-        catchphrase: "夢は、どこまでも。",
-        song: "Brand New Day",
-        parade: "ドリーミング・アップ！",
-        costume: "リボン"
+        price: "550円",
+        store: "キャプテンフックス・ギャレー（TDL）",
+        content: "ディズニーで昔から親しまれてきたパイナップルが乗ったピザ",
     },
     {
         id: 5,
-        anniversary: "40周年",
-        period: "2023年4月15日〜2024年3月31日",
-        theme: "ドリームゴーラウンド",
-        concept: "ドリーム・ガーランド",
-        catchphrase: "ずっと、待ってた！",
-        song: "Living in Color",
-        parade: "ディズニー・ハーモニー・イン・カラー",
-        costume: "風車"
-    }
+        price: "600円",
+        store: "ボイラールーム・バイツ（TDL）/ ノーチラスギャレー（TDS）",
+        content: "生姜の効いた餃子の餡を包んだ餃子饅",
+    },
+    {
+        id: 6,
+        price: "600円",
+        store: "エクスペディション・イート（TDS）",
+        content: "パンにソーセージを突っ込んだだけの簡易的なものだが、本当に美味しい",
+    },
+    {
+        id: 7,
+        price: "850円",
+        store: "オーケンのオーケーフード（TDS）",
+        content: "カルダモンが香る北欧の味",
+    },
 ];
 
-let nextId = 6;
+let nextId = 8;
 
 
 /* ===== API ===== */
@@ -86,7 +73,7 @@ app.get("/api/items/:id", (req, res) => {
 app.post("/api/items", (req, res) => {
     const item = {
         id: nextId++,
-        anniversary: req.body.anniversary,
+        store: req.body.store,
         period: req.body.period,
         theme: req.body.theme,
         concept: req.body.concept,
