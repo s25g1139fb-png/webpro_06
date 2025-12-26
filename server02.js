@@ -4,68 +4,79 @@ const express = require("express");
 const app = express();
 
 app.use(express.json());
-app.use(express.static("public01"));
+app.use(express.static("public02"));
 
 /* ===== データ（ここを書き換えるだけで完成） ===== */
 let items = [
     {
         id: 1,
-        anniversary: "20周年",
-        period: "2003年1月25日〜2004年4月11日",
-        theme: "Make a Wish",
-        concept: "DREAM",
-        catchphrase: "200％ディズニー！",
-        song: "Make a Wish",
-        parade: "ディズニー・ドリームス・オン・パレード",
-        costume: "東京ディズニーランドの各テーマエリア"
+        anniversary: "1周年",
+        period: "2002年9月4日〜2002年10月20日",
+        theme: "サンクス・トュ・ユー",
+        concept: "東京ディズニーシー",
+        catchphrase: "冒険とイマジネーションの海へ",
+        song: "Thanks to You",
+        show: "1stアニバーサリー・セレブレーション",
+        costume: "提督＆セーラー"
     },
     {
         id: 2,
-        anniversary: "25周年",
-        period: "2008年4月14日〜2009年4月14日",
-        theme: "The Dream Goes On",
-        concept: "夢を開く魔法の鍵",
-        catchphrase: "夢よ、ひらけ。",
-        song: "魔法の鍵〜The Dream Goes On",
-        parade: "ジュビレーション！",
-        costume: "バージョンアップ"
+        anniversary: "5周年",
+        period: "2006年7月14日〜2007年5月31日",
+        theme: "シー・オブ・ドリームス",
+        concept: "東京ディズニーシー",
+        catchphrase: "さぁ、祝祭の海へ",
+        song: "Sea Of Dream",
+        show: "レジェンド・オブ・ミシカ",
+        costume: "冒険"
     },
     {
         id: 3,
-        anniversary: "30周年",
-        period: "2013年4月15日〜2014年3月20日",
-        theme: "ザ・ハピネス・イヤー",
-        concept: "ハピネス・バルーン",
-        catchphrase: "ハピネスはここに！",
-        song: "Happiness is Here",
-        parade: "ハピネス・イズ・ヒア",
-        costume: "おもちゃ"
+        anniversary: "10周年",
+        period: "2011年9月4日〜2012年3月19日",
+        theme: "Be Magical!",
+        concept: "マジカル・ハット",
+        catchphrase: "Be Magical!",
+        song: "It'll Be Magical!",
+        parade: "Be Magical!",
+        costume: "魔法使い"
     },
     {
         id: 4,
-        anniversary: "35周年",
-        period: "2018年4月15日〜2019年3月25日",
-        theme: "Happiest Celebration!",
-        concept: "ドリーム・リボン",
-        catchphrase: "夢は、どこまでも。",
-        song: "Brand New Day",
-        parade: "ドリーミング・アップ！",
-        costume: "リボン"
+        anniversary: "15周年",
+        period: "2016年4月15日〜2017年3月17日",
+        theme: "ザ・イヤー・オブ・ウィッシュ",
+        concept: "願いを輝かせる冒険の旅立ち",
+        catchphrase: "Wish",
+        song: "When Your Heart Makes a Wish",
+        parade: "クリスタル・ウィッシュ・ジャーニー",
+        costume: "ウィッシュ・クリスタル"
     },
     {
         id: 5,
-        anniversary: "40周年",
-        period: "2023年4月15日〜2024年3月31日",
-        theme: "ドリームゴーラウンド",
-        concept: "ドリーム・ガーランド",
-        catchphrase: "ずっと、待ってた！",
-        song: "Living in Color",
-        parade: "ディズニー・ハーモニー・イン・カラー",
-        costume: "風車"
+        anniversary: "20周年",
+        period: "2021年9月4日〜2022年9月3日",
+        theme: "タイム・トュ・シャイン！",
+        concept: "キラキラ輝く特別な1年",
+        catchphrase: "みんなの笑顔が輝く時",
+        song: "Time to Shine",
+        parade: "タイム・トュ・シャイン！",
+        costume: "シャイニーホワイト"
+    },
+    {
+        id: 6,
+        anniversary: "25周年",
+        period: "2026年4月15日〜2027年3月31日",
+        theme: "スパークリング・ジュビリー",
+        concept: "きらめく祝祭",
+        catchphrase: "きらめきを、これからも。",
+        song: "✨Coming soon✨",
+        parade: "スパークリング・ジュビリー・セレブレーション",
+        costume: "ジュビリーブルー"
     }
 ];
 
-let nextId = 6;
+let nextId = 7;
 
 
 /* ===== API ===== */
@@ -92,7 +103,7 @@ app.post("/api/items", (req, res) => {
         concept: req.body.concept,
         catchphrase: req.body.catchphrase,
         song: req.body.song,
-        parade: req.body.parade,
+        show: req.body.show,
         costume: req.body.costume
     };
     items.push(item);
@@ -110,7 +121,7 @@ app.post("/api/items/:id", (req, res) => {
         item.concept = req.body.concept;
         item.catchphrase = req.body.catchphrase;
         item.song = req.body.song;
-        item.parade = req.body.parade;
+        item.show = req.body.show;
         item.costume = req.body.costume;
     }
 

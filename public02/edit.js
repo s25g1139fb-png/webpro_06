@@ -10,7 +10,7 @@ const theme = document.getElementById("theme");
 const concept = document.getElementById("concept");
 const catchphrase = document.getElementById("catchphrase");
 const song = document.getElementById("song");
-const parade = document.getElementById("parade");
+const show = document.getElementById("show");
 const costume = document.getElementById("costume");
 
 fetch(`/api/items/${id}`)
@@ -21,7 +21,7 @@ fetch(`/api/items/${id}`)
         concept.value = item.concept;
         catchphrase.value = item.catchphrase;
         song.value = item.song;
-        parade.value = item.parade;
+        show.value = item.show;
         costume.value = item.costume;
     });
 
@@ -37,7 +37,7 @@ form.onsubmit = e => {
             concept: concept.value,
             catchphrase: catchphrase.value,
             song: song.value,
-            parade: parade.value,
+            show: show.value,
             costume: costume.value
         })
     }).then(() => {

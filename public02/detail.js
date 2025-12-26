@@ -13,7 +13,7 @@ fetch(`/api/items/${id}`)
       <p>コンセプト：${item.concept}</p>
       <p>キャッチフレーズ：${item.catchphrase}</p>
       <p>テーマソング：${item.song}</p>
-      <p>周年パレード：${item.parade}</p>
+      <p>周年ショー：${item.show}</p>
       <p>衣装コンセプト：${item.costume}</p>
     `;
   });
