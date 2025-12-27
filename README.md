@@ -34,36 +34,39 @@
 
 ## ディレクトリ構成
 webpro_06
-├── server01.js（TDLの周年）
-├── public01（TDLの周年）
+├── server_report.js
+├── public_report
 │   ├── index.html
-│   ├── index.js
-│   ├── detail.html
-│   ├── detail.js
-│   ├── edit.html
-│   ├── edit.js
-│   ├── delete.html
-│   └── delete.js
-├── server02.js（TDSの周年）
-├── public02（TDSの周年）
-│   ├── index.html
-│   ├── index.js
-│   ├── detail.html
-│   ├── detail.js
-│   ├── edit.html
-│   ├── edit.js
-│   ├── delete.html
-│   └── delete.js
-├── server02.js（TDRのフード）
-├── public02（TDRのフード）
-│   ├── index.html
-│   ├── index.js
-│   ├── detail.html
-│   ├── detail.js
-│   ├── edit.html
-│   ├── edit.js
-│   ├── delete.html
-│   └── delete.js
+│   ├── tdl.html
+│   ├── tdl.js
+│   ├── detail_tdl.html
+│   ├── detail_tdl.js
+│   ├── edit_tdl.html
+│   ├── edit_tdl.js
+│   ├── delete_tdl.html
+│   ├── delete_tdl.js
+│   ├── add_tdl.html
+│   ├── add_tdl.js
+│   ├── tds.html
+│   ├── tds.js
+│   ├── detail_tds.html
+│   ├── detail_tds.js
+│   ├── edit_tds.html
+│   ├── edit_tds.js
+│   ├── delete_tds.html
+│   ├── delete_tds.js
+│   ├── add_tds.html
+│   ├── add_tds.js
+│   ├── food.html
+│   ├── food.js
+│   ├── detail_food.html
+│   ├── detail_food.js
+│   ├── edit_food.html
+│   ├── edit_food.js
+│   ├── delete_food.html
+│   ├── delete_food.js
+│   ├── add_food.html
+│   └── add_food.js
 └── README.md
 
 ---
